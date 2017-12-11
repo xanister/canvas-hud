@@ -11,6 +11,7 @@
     "watch": "webpack --watch"
   },
   "pre-commit": [
+    "build",
     "test"
   ],
   "repository": {
