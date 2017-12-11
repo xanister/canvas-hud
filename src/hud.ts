@@ -1,5 +1,5 @@
-import { Dialog } from "./Dialog";
+import { Caption } from "./Caption";
 
 export function foo() {
-    console.log(new Dialog());
+    console.log(new Caption());
 }
