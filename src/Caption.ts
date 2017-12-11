@@ -15,6 +15,11 @@ export class Caption {
     x: number;
     y: number;
 
+    static render(context: CanvasRenderingContext2D, text: string, x: number, y: number, font: string = "30px Arial") {
+        context.font = font;
+        context.fillText(text, x, y);
+    }
+
     constructor(options: CaptionOptions) {
         this.message = options.message;
         this.context = options.context || this;
@@ -23,7 +28,6 @@ export class Caption {
     }
 
     render(context: CanvasRenderingContext2D) {
-        context.font = "30px Arial";
-        context.fillText(this.message(this.context), this.x, this.y);
+        Caption.render(context, this.message(this.context), this.x, this.y);
     }
 }
