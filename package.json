@@ -1,0 +1,19 @@
+{
+  "name": "canvas-hud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "CanvasHub.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xanister/canvas-hud.git"
+  },
+  "author": "Nicholas Frees",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xanister/canvas-hud/issues"
+  },
+  "homepage": "https://github.com/xanister/canvas-hud#readme"
+}
