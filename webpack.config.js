@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
-    entry: "./src/canvas-hud.ts",
+    entry: "./src/index.ts",
     output: {
         filename: "./dist/index.js",
     },

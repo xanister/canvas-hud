@@ -81,10 +81,13 @@ exports.Caption = Caption_1.Caption;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-class Caption {
-    render(context) {
+var Caption = /** @class */ (function () {
+    function Caption() {
     }
-}
+    Caption.prototype.render = function (context) {
+    };
+    return Caption;
+}());
 exports.Caption = Caption;
 
 
