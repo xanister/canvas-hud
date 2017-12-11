@@ -15,7 +15,7 @@ export class Caption {
     x: number;
     y: number;
 
-    static render(context: CanvasRenderingContext2D, text: string, x: number, y: number, font: string = "30px Arial") {
+    public static render(context: CanvasRenderingContext2D, text: string, x: number, y: number, font: string = "30px Arial") {
         context.font = font;
         context.fillText(text, x, y);
     }
