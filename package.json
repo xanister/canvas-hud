@@ -2,16 +2,11 @@
   "name": "canvas-hud",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./index",
   "scripts": {
-    "build": "webpack",
-    "prepublish": "npm run build",
-    "test": "mocha -r ts-node/register spec/**/*.ts",
-    "watch": "webpack --watch"
+    "test": "jest"
   },
   "pre-commit": [
-    "build",
     "test"
   ],
   "repository": {
@@ -25,18 +20,7 @@
   },
   "homepage": "https://github.com/xanister/canvas-hud#readme",
   "devDependencies": {
-    "@types/chai": "*",
-    "@types/jsdom": "*",
-    "@types/mocha": "*",
-    "chai": "*",
-    "jsdom": "*",
-    "jsdom-global": "*",
-    "json-loader": "*",
-    "mocha": "*",
-    "pre-commit": "*",
-    "ts-loader": "*",
-    "ts-node": "*",
-    "typescript": "*",
-    "webpack": "*"
+    "jest": "*",
+    "pre-commit": "*"
   }
 }
