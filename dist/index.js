@@ -80,14 +80,24 @@ exports.Caption = Caption_1.Caption;
 
 "use strict";
 
+// export type CaptionMessage = string;
+// export type CaptionMessageResolver = () => string;
 Object.defineProperty(exports, "__esModule", { value: true });
-var Caption = /** @class */ (function () {
-    function Caption() {
+class Caption {
+    static render(context, text, x, y, font = "30px Arial") {
+        context.font = font;
+        context.fillText(text, x, y);
     }
-    Caption.prototype.render = function (context) {
-    };
-    return Caption;
-}());
+    constructor(options) {
+        this.message = options.message;
+        this.context = options.context || this;
+        this.x = options.x;
+        this.y = options.y;
+    }
+    render(context) {
+        Caption.render(context, this.message(this.context), this.x, this.y);
+    }
+}
 exports.Caption = Caption;
 
 
