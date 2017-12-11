@@ -8,6 +8,6 @@ describe('test', function () {
 
     it('test', function () {
 
-        expect(true).to.be.true;
+        expect(false).to.be.true;
     });
 });

@@ -30,6 +30,7 @@
     "jsdom-global": "*",
     "json-loader": "*",
     "mocha": "*",
+    "pre-commit": "*",
     "ts-loader": "*",
     "ts-node": "*",
     "typescript": "*",
