@@ -1,9 +1,9 @@
 const webpack = require('webpack');
 
 module.exports = {
-    entry: "./src/hud.ts",
+    entry: "./src/canvas-hud.ts",
     output: {
-        filename: "./dist/hud.js",
+        filename: "./dist/index.js",
     },
     resolve: {
         extensions: [".ts", ".js", ".json"]

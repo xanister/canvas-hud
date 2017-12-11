@@ -2,9 +2,10 @@
   "name": "canvas-hud",
   "version": "1.0.0",
   "description": "",
-  "main": "hud.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "webpack",
+    "prepublish": "npm run build",
     "test": "mocha -r ts-node/register spec/**/*.ts",
     "watch": "webpack --watch"
   },
