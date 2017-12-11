@@ -1,8 +1,15 @@
-
 const Caption = require("../src/Caption");
 
-test('correctly sets message with context', () => {
-    let c = new Caption({ message: ctx => `foo - ${ctx}`, messageContext: "bar" });
+describe("correctly sets message", () => {
+    test("to configured string", () => {
+        let c = new Caption("foo")
 
-    expect(c.message).toBe("foo - bar");
+        expect(c.message).toBe("foo");
+    });
+
+    test("to result of configured function with correct context", () => {
+        let c = new Caption(ctx => `foo - ${ctx}`, 0, 0, { messageContext: "bar" });
+
+        expect(c.message).toBe("foo - bar");
+    });
 });
