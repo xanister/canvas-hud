@@ -1,2 +1,5 @@
-export { Caption } from "./Caption";
-export { Test } from "./Test";
+var Caption = require("./Caption");
+exports.use(Caption);
+
+var Test = require("./Test");
+exports.use(Test);
