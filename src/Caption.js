@@ -1,6 +1,11 @@
+const DEFAULT_CAPTION_OPTIONS = {
+    fillColor: "black",
+    font: "30px Arial"
+}
+
 module.exports = class Caption {
     static render(canvasContext, text, x, y, opts = {}) {
-        if (opts.color) canvasContext.fillColor = opts.color;
+        if (opts.fillColor) canvasContext.fillColor = opts.fillColor;
         if (opts.font) canvasContext.font = opts.font;
 
         canvasContext.fillText(text, x, y);
@@ -9,10 +14,9 @@ module.exports = class Caption {
     constructor(message, x, y, opts = {}) {
         this._message = message;
         
-        this.decay = 0;
         this.x = x;
         this.y = y;
-        this.opts = Object.assign({}, opts);
+        this.opts = Object.assign({}, DEFAULT_CAPTION_OPTIONS, opts);
     }
 
     get message() {
@@ -20,11 +24,9 @@ module.exports = class Caption {
             this._message(this.opts.messageContext) : this._message;
     }
 
-    set message(text) { this._message = test; }
+    set message(text) { this._message = text; }
 
     render(canvasContext) {
-        if (this.opts.decay) this.decay += this.opts.decay
-
         Caption.render(
             canvasContext, 
             this.message,
