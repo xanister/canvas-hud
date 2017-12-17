@@ -4,14 +4,15 @@ const DEFAULT_CAPTION_OPTIONS = {
 }
 
 module.exports = class Caption {
-    static render(canvasContext, text, x, y, opts = {}) {
+    static render(canvasContext, message, x, y, opts = {}) {
         if (opts.fillColor) canvasContext.fillColor = opts.fillColor;
         if (opts.font) canvasContext.font = opts.font;
 
-        canvasContext.fillText(text, x, y);
+        canvasContext.fillText(message, x, y);
     }
 
-    constructor(message, x, y, opts = {}) {
+    constructor(id, message, x, y, opts = {}) {
+        this.id = id;
         this._message = message;
         
         this.x = x;
