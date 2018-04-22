@@ -4,12 +4,23 @@
 </head>
 
 <body>
+  <canvas id="canvas"></canvas>
   <script type="module">
-    import { CaptionExample } from "./caption-example.js";
+    import { Caption, HUD } from "./node_modules/canvas-hud/src/index.js";
 
-    window.c = new CaptionExample();
+    let app = {};
 
-    c.run();
+    // Initialize generic HUD
+    app.hud = new HUD();
+
+    // Create a caption
+    app.caption = new Caption("Caption text", 50, 50);
+
+    // Add the new caption to the HUD
+    app.hud.addElement(app.caption);
+  
+    // Render the HUD
+    app.hud.render(document.getElementById("canvas").getContext("2d"));
   </script>
 </body>
 
