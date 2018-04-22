@@ -1,17 +1,10 @@
-const Caption = require("../src/Caption");
+import { expect } from "chai";
+import { Caption, HUD } from "../src/index";
 
 describe("Caption", () => {
-    describe("gets and sets message", () => {
-        test("to configured string", () => {
-            let c = new Caption("foo", "test message")
+  it("gets and sets message", () => {
+    let c = new Caption("foo", "test message")
 
-            expect(c.message).toBe("test message");
-        });
-
-        test("to result of configured function with correct context", () => {
-            let c = new Caption("foo", ctx => `test message - ${ctx}`, 0, 0, { messageContext: "bar" });
-
-            expect(c.message).toBe("test message - bar");
-        });
-    });
+    expect(c.message).to.equal("test message");
+  });
 });
