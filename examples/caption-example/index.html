@@ -13,8 +13,14 @@
     // Initialize generic HUD
     app.hud = new HUD();
 
+    // Set default caption properties
+    Object.assign(Caption.DEFAULT_CAPTION_OPTIONS, {
+      fillStyle: "gray",
+      font: "12px Arial"
+    });
+
     // Add a static caption to the HUD
-    app.hud.addElement(new Caption("Example static caption", 0, 30));
+    app.hud.addElement(new Caption(`Example static caption: ${Date.now()}`, 0, 30));
 
     // Add a caption with a dynamic message to the HUD
     app.hud.addElement(new Caption(() => `Example dynamic caption: ${Date.now()}`, 0, 60));

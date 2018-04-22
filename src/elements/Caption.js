@@ -1,6 +1,6 @@
 export class Caption {
   static render(canvasContext, message, x, y, opts = {}) {
-    if (opts.fillColor) canvasContext.fillColor = opts.fillColor;
+    if (opts.fillStyle) canvasContext.fillStyle = opts.fillStyle;
     if (opts.font) canvasContext.font = opts.font;
 
     canvasContext.fillText(message, x, y);
@@ -33,8 +33,8 @@ export class Caption {
 }
 
 Caption.DEFAULT_CAPTION_OPTIONS = {
-  fillColor: "black",
-  font: "16px Arial"
+  fillStyle: "black",
+  font: "30px Arial"
 }
 
 Caption.idCounter = 0;
