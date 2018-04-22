@@ -14,7 +14,6 @@ module.exports = class Caption {
     constructor(id, message, x, y, opts = {}) {
         this.id = id;
         this._message = message;
-        
         this.x = x;
         this.y = y;
         this.opts = Object.assign({}, DEFAULT_CAPTION_OPTIONS, opts);

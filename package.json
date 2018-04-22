@@ -2,7 +2,7 @@
   "name": "canvas-hud",
   "version": "1.0.0",
   "description": "",
-  "main": "./index",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest"
   },
