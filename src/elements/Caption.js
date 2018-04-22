@@ -34,7 +34,7 @@ export class Caption {
 
 Caption.DEFAULT_CAPTION_OPTIONS = {
   fillColor: "black",
-  font: "30px Arial"
+  font: "16px Arial"
 }
 
 Caption.idCounter = 0;

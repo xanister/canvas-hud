@@ -13,11 +13,11 @@
     // Initialize generic HUD
     app.hud = new HUD();
 
-    // Create a caption
-    app.caption = new Caption("Caption text", 50, 50);
+    // Add a static caption to the HUD
+    app.hud.addElement(new Caption("Example static caption", 0, 30));
 
-    // Add the new caption to the HUD
-    app.hud.addElement(app.caption);
+    // Add a caption with a dynamic message to the HUD
+    app.hud.addElement(new Caption(() => `Example dynamic caption: ${Date.now()}`, 0, 60));
   
     // Render the HUD
     app.hud.render(document.getElementById("canvas").getContext("2d"));
