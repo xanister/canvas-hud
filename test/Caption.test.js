@@ -3,7 +3,7 @@ import { Caption, HUD } from "../src/index";
 
 describe("Caption", () => {
   it("gets and sets message", () => {
-    let c = new Caption("foo", "test message")
+    let c = new Caption("test message")
 
     expect(c.message).to.equal("test message");
   });

@@ -20,7 +20,7 @@ describe("HUD", () => {
 
   describe(".removeElement", () => {
     it("removes element", () => {
-      let c = new Caption("foo");
+      let c = new Caption("test message");
 
       hud.addElement(c);
 
@@ -34,7 +34,7 @@ describe("HUD", () => {
 
   describe(".removeElementById", () => {
     it("removes element", () => {
-      let c = new Caption("foo");
+      let c = new Caption("test message", 0, 0, {}, "foo");
 
       hud.addElement(c);
 

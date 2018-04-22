@@ -1,5 +1,16 @@
-<script type="module">
+<html>
+<head>
+  <title>Caption Example</title>
+</head>
+
+<body>
+  <script type="module">
     import { CaptionExample } from "./caption-example.js";
 
-    let c = new CaptionExample();
-</script>
+    window.c = new CaptionExample();
+
+    c.render();
+  </script>
+</body>
+
+</html>
