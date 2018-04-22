@@ -3,7 +3,7 @@ const DEFAULT_CAPTION_OPTIONS = {
     font: "30px Arial"
 }
 
-export default class Caption {
+export class Caption {
     static render(canvasContext, message, x, y, opts = {}) {
         if (opts.fillColor) canvasContext.fillColor = opts.fillColor;
         if (opts.font) canvasContext.font = opts.font;

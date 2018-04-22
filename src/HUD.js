@@ -1,4 +1,4 @@
-export default class HUD {
+export class HUD {
     constructor() {
         this.elements = [];
     }
