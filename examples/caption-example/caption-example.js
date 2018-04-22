@@ -10,7 +10,7 @@ export class CaptionExample {
     this.hud.addElement(this.caption);
   }
 
-  render() {
+  run() {
     this.hud.render(this.canvas.getContext("2d"));
   }
 }
