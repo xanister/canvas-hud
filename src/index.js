@@ -1,2 +1,2 @@
-export * from "./Caption";
-export * from "./HUD";
+export * from "./Caption.js";
+export * from "./HUD.js";
